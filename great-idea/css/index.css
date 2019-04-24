@@ -194,10 +194,6 @@ header .logo {
   /* border: 1px solid black; */
 }
 
-/* header .logo .logo-image {
-	width: 30%;
-	flex: 1;
-} */
 
 /* End Header Section Styling */
 
@@ -336,6 +332,8 @@ header .logo {
 .showcase-section {
 	border-top: 1px solid black;
 	border-bottom: 1px solid black;
+	display: flex;
+	flex-direction: column;
 }
 
 /* showcase 1 section */
