@@ -3,64 +3,475 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
-    font-family: 'Titillium Web', sans-serif;
+html,
+body {
+  height: 100%;
+  font-family: "Titillium Web", sans-serif;
+  margin: 10px 50px;
+  /* flex codes */
+  display: flex;
+  flex-direction: column;
 }
 
-h1, h2, h3, h4, h5 {
-    font-family: 'Bangers', cursive;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Bangers", cursive;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
 }
 
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
+
+/* Header Section Styling */
+header {
+  /* flex codes */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+header nav {
+  /* flex codes */
+  display: flex;
+  flex: 7;
+
+  /* normal css */
+  /* border: 1px solid black; */
+  height: 50px;
+}
+
+header nav a {
+  /* normal css */
+  text-decoration: none;
+  color: grey;
+  padding: 15px;
+  /* border: 1px solid black; */
+
+  /* flex codes */
+  flex: 1;
+}
+
+header .logo {
+  /* flex codes */
+  display: flex;
+  justify-content: flex-end;
+  flex: 3;
+
+  /* normal css */
+  /* border: 1px solid black; */
+}
+
+
+/* End Header Section Styling */
+
+/* Introduction Section Styling */
+.introduction-section {
+  /* flex codes */
+  display: flex;
+  flex: 1;
+  justify-content: baseline;
+}
+
+.introduction-section .caption {
+  /* normal css */
+  font-weight: 400px;
+  padding-top: 50px;
+  text-align: center;
+
+  /* flex codes */
+  flex: 1;
+}
+
+.introduction-section .caption h1 {
+  font-size: 70px;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.introduction-section .caption-image {
+  /* normal css */
+  text-align: center;
+  width: 30%;
+  padding-bottom: 40px;
+
+  /* flex codes */
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.introduction-section .caption-image img {
+  padding-top: 30px;
+}
+
+.introduction-section .caption button {
+  border: 1px solid black;
+  padding: 10px 30px;
+}
+/* End Introduction Section Styling */
+
+/* Top Section Styling */
+.top-section {
+  /* normal css */
+  margin-top: 70px;
+  margin-right: 10%;
+  padding-top: 30px;
+  border-top: 1px solid black;
+  width: 100%;
+
+  /* flex codes */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.top-section .features-block,
+.about-block {
+  /* normal css */
+  width: 49.5%;
+  padding-bottom: 30px;
+  padding-right: 20px;
+
+  /* flex codes */
+  flex: 1;
+  margin: 0 auto;
+  align-self: flex-end;
+}
+/* End Top Section Styling */
+
+/* Image Section Styling */
+.image-section .middle-img {
+  width: 100%;
+}
+/* End image Section Styling */
+
+/* Bottom Section Styling */
+.bottom-section {
+  display: flex;
+}
+.bottom-section .services-block,
+.product-block,
+.vision-block {
+  flex: 1;
+  width: 33%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-right: 30px;
+}
+/* End Bottom Section Styling */
+
+/* Address Section Styling */
+.address-section {
+  padding-top: 30px;
+  padding-bottom: 50px;
+  border-top: 1px solid black;
+}
+
+.address-section p {
+  padding-top: 10px;
+}
+/* End Address Section Styling */
+
+/* Service Section Styling */
+.services {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+
+.services .services-header-img {
+  flex: 1;
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.services .services-writeup {
+  flex: 1;
+}
+
+.services .services-writeup h1 {
+  font-size: 30px;
+}
+/* End Service Section Styling */
+
+/* Showcase section */
+.showcase-section {
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	display: flex;
+	flex-direction: column;
+}
+
+/* showcase 1 section */
+.service-showcase-1 {
+  padding-top: 35px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 30px;
+}
+
+.service-showcase-1 .digitaldesign-showcase,
+.ux-showcase {
+  flex: 1;
+  border: 1px solid black;
+  background-color: #f4f3f4;
+  margin-left: 0px;
+  padding: 10px;
+}
+
+.service-showcase-1 .ux-showcase {
+  margin-left: 30px;
+}
+
+.service-showcase-1 > .digitaldesign-showcase p,
+.ux-showcase p {
+  margin-bottom: 10px;
+}
+
+.service-showcase-1 > .digitaldesign-showcase button,
+.ux-showcase button {
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 10px 20px;
+}
+
+/* showcase 2 section */
+.service-showcase-2 {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 30px;
+}
+
+.service-showcase-2 .marketing-showcase,
+.webdev-showcase {
+  flex: 1;
+  border: 1px solid black;
+  background-color: #f4f3f4;
+  margin-left: 0px;
+  padding: 10px;
+}
+
+.service-showcase-2 .webdev-showcase {
+  margin-left: 30px;
+}
+
+.service-showcase-2 > .marketing-showcase p,
+.webdev-showcase p {
+  margin-bottom: 10px;
+}
+
+.service-showcase-2 > .marketing-showcase button,
+.webdev-showcase button {
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 10px 20px;
+}
+
+/* showcase 3 section */
+.service-showcase-3 {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+}
+
+.service-showcase-3 .ios-showcase,
+.android-showcase {
+  flex: 1;
+  border: 1px solid black;
+  background-color: #f4f3f4;
+  margin-left: 0px;
+  padding: 10px;
+}
+
+.service-showcase-3 .android-showcase {
+  margin-left: 30px;
+}
+
+.service-showcase-3 > .ios-showcase p,
+.android-showcase p {
+  margin-bottom: 10px;
+}
+
+.service-showcase-3 > .ios-showcase button,
+.android-showcase button {
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 10px 20px;
+}
+
+/* End show case section */
+
+
+/* Fact Section Styling */
+.fact-section {
+	padding-top: 20px;
+	display: flex;
+}
+
+.fact-section .articles-notes {
+	flex:2;
+}
+
+.fact-section .articles-notes ul {
+	list-style-type: square;
+	padding-left: 20px;
+	margin-top: 30px;
+}
+
+.fact-section .articles-notes ul li {
+	margin-bottom: 10px;
+}
+
+.fact-section .article-image{
+	margin-bottom: 10px;
+	flex: 1;
+}
+
+/* End fact section Styling*/
+
+/* Footer Section Styling */
+footer {
+  display: block;
+  width: 100%;
+}
+
+footer p {
+  padding: 20px;
+  text-align: center;
+}
+/* End Footer Section Styling */
